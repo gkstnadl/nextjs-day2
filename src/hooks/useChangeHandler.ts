@@ -9,6 +9,7 @@ const useChangeHandler = () => {
 
   return {
     value,
+    setValue,
     onChange: onChangeHandler,
   };
 };
