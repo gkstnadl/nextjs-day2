@@ -10,3 +10,8 @@ export type AboutType = {
   desctiption: string;
   image: string;
 };
+
+export type TodoListType = {
+  todoList: TodoType[] | undefined;
+  isDone: boolean;
+};
