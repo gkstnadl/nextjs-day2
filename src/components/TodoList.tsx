@@ -1,5 +1,8 @@
+"use client";
+
 import { TodoType } from "@/types";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+
 const TodoList = () => {
   const queryKey = ["todoList"];
   const queryClient = useQueryClient();
