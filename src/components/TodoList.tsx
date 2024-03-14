@@ -26,18 +26,18 @@ const TodoList = () => {
     onSuccess: () => queryClient.invalidateQueries({ queryKey }),
   };
 
-  const { mutate: addMutate } = useMutation({
-    mutationFn: async (newTodo: Pick<TodoType, "title" | "contents">) => {
-      await fetch("http://localhost:3000/api/todoList", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newTodo),
-      });
-    },
-    ...mutationOptions,
-  });
+  // const { mutate: addMutate } = useMutation({
+  //   mutationFn: async (newTodo: Pick<TodoType, "title" | "contents">) => {
+  //     await fetch("http://localhost:3000/api/todoList", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(newTodo),
+  //     });
+  //   },
+  //   ...mutationOptions,
+  // });
 
   const { mutate: updateMutate } = useMutation({
     mutationFn: async ({ id, isDone }: { id: string; isDone: boolean }) => {

@@ -14,7 +14,9 @@ export const useAddTodo = () => {
       });
     },
     onSuccess: () => {
-      queryClient.invalidateQueries(["todoList"]);
+      queryClient.invalidateQueries({
+        queryKey: ["todoList"],
+      });
     },
   });
 
