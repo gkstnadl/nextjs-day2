@@ -1,11 +1,8 @@
-import { QueryClient, QueryClientProvider } from "react-query";
-
-const queryClient = new QueryClient();
-
 export default function Home() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <div>내 용</div>
-    </QueryClientProvider>
+    <div>
+      <h1>Next.js 개인과제</h1>
+      <p>This is SpartaCodingClub</p>
+    </div>
   );
 }
