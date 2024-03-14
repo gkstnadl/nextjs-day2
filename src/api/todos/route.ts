@@ -5,6 +5,13 @@ const url = "http://localhost:4000/todos";
 export const fetchTodo = async () => {
   const res = await fetch(`${url}`);
   const data = await res.json();
+
+  if (!data) {
+    return new Response("Todo is not found", {
+      status: 404,
+    });
+  }
+
   return data;
 };
 
