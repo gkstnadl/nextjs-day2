@@ -2,7 +2,7 @@ import { AboutType } from "@/types";
 import Image from "next/image";
 import React from "react";
 
-const page = async () => {
+const About = async () => {
   const res = await fetch("http://localhost:4000/about");
   const about: AboutType = await res.json();
 
@@ -16,4 +16,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default About;

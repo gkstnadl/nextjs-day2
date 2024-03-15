@@ -5,7 +5,7 @@ export const useAddTodo = () => {
   const queryClient = useQueryClient();
   const { mutate: addMutate } = useMutation({
     mutationFn: async (newTodo: { title: string; contents: string }) => {
-      await fetch("http://localhost:3000/api/todoList", {
+      await fetch("http://localhost:3000/api/todos", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

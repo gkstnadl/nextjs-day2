@@ -20,10 +20,10 @@ const page = async () => {
           .map((item) => {
             return (
               <div key={item.id}>
-                <Link href={`/todos-ssr/${item.id}`}>
-                  <h3>{item.title}</h3>
-                  <p>{item.contents}</p>
-                </Link>
+                {/* <Link href={`/todos-ssr/${item.id}`}> */}
+                <h3>{item.title}</h3>
+                <p>{item.contents}</p>
+                {/* </Link> */}
               </div>
             );
           })}
